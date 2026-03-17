@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import ntWords from "./data/nt_words.json"
+import ntWords from "./data/nt_words.json";
 
 const STORAGE_KEY = "greek-flashcards-simple-v4";
 const DEFAULT_DIFFICULTY = 50;
