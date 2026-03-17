@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import ntWords from "./data/nt_words.json"
 
 const STORAGE_KEY = "greek-flashcards-simple-v4";
 const DEFAULT_DIFFICULTY = 50;
@@ -62,41 +63,7 @@ const translations = {
   },
 };
 
-const starterDeck = [
-  {
-    id: crypto.randomUUID(),
-    greek: "ἀγάπη",
-    fullWords: "ἀγάπη, -ης, ἡ",
-    meaning: "love",
-    type: "Noun",
-    frequency: 116,
-    difficulty: 50,
-    known: 0,
-    missed: 0,
-  },
-  {
-    id: crypto.randomUUID(),
-    greek: "λόγος",
-    fullWords: "λόγος, -ου, ὁ",
-    meaning: "word, message",
-    type: "Noun",
-    frequency: 330,
-    difficulty: 50,
-    known: 0,
-    missed: 0,
-  },
-  {
-    id: crypto.randomUUID(),
-    greek: "γινώσκω",
-    fullWords: "γινώσκω",
-    meaning: "to know",
-    type: "Verb",
-    frequency: 222,
-    difficulty: 50,
-    known: 0,
-    missed: 0,
-  },
-];
+const starterDeck = ntWords;
 
 function clampDifficulty(value) {
   return Math.max(0, Math.min(100, value));
